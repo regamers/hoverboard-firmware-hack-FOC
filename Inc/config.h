@@ -347,7 +347,7 @@
    * use the right one of the 2 types of nunchuks, add i2c pullups.
    * use original nunchuk. most clones does not work very well.
    * Recommendation: Nunchuk Breakout Board https://github.com/Jan--Henrik/hoverboard-breakout
-  */
+ */
   #define CONTROL_NUNCHUK         0       // use nunchuk as input. Number indicates priority for dual-input. Disable FEEDBACK_SERIAL_USART3, DEBUG_SERIAL_USART3!
 
   // #define DUAL_INPUTS                     // Nunchuk*(Primary) + UART(Auxiliary). Uncomment this to use Dual-inputs
