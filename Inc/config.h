@@ -263,7 +263,7 @@
 
 
 // ################################# VARIANT_ADC SETTINGS ############################
-#ifdef VARIANT_ADC
+//#ifdef VARIANT_ADC
 /* CONTROL VIA TWO POTENTIOMETERS
  * Connect potis to left sensor board cable (0 to 3.3V) (do NOT use the red 15V wire!)
  *
@@ -310,7 +310,7 @@
 
 
 // ############################ VARIANT_USART SETTINGS ############################
-#ifdef VARIANT_USART
+//#ifdef VARIANT_USART
   // #define SIDEBOARD_SERIAL_USART2 0
  // #define CONTROL_SERIAL_USART2  0    // left sensor board cable, disable if ADC or PPM is used! For Arduino control check the hoverSerial.ino
  // #define FEEDBACK_SERIAL_USART2      // left sensor board cable, disable if ADC or PPM is used!
@@ -356,13 +356,13 @@
   #ifdef DUAL_INPUTS
     #define FLASH_WRITE_KEY       0x1103  // Flash memory writing key. Change this key to ignore the input calibrations from the flash memory and use the ones in config.h
     // #define SIDEBOARD_SERIAL_USART2 1
-    #define CONTROL_SERIAL_USART2 1       // left sensor board cable, disable if ADC or PPM is used! For Arduino control check the hoverSerial.ino
-    #define FEEDBACK_SERIAL_USART2        // left sensor board cable, disable if ADC or PPM is used!
+    //#define CONTROL_SERIAL_USART2 1       // left sensor board cable, disable if ADC or PPM is used! For Arduino control check the hoverSerial.ino
+    //#define FEEDBACK_SERIAL_USART2        // left sensor board cable, disable if ADC or PPM is used!
     #define AUX_INPUT1            3, -1000, 0, 1000, 0     // TYPE, MIN, MID, MAX, DEADBAND. See INPUT FORMAT section
     #define AUX_INPUT2            3, -1000, 0, 1000, 0     // TYPE, MIN, MID, MAX, DEADBAND. See INPUT FORMAT section
   #else
     #define FLASH_WRITE_KEY       0x1003  // Flash memory writing key. Change this key to ignore the input calibrations from the flash memory and use the ones in config.h
-    #define DEBUG_SERIAL_USART2           // left sensor cable debug
+    //#define DEBUG_SERIAL_USART2           // left sensor cable debug
   #endif
 
   // # maybe good for ARMCHAIR #
@@ -376,7 +376,7 @@
 
 
 // ################################# VARIANT_PPM SETTINGS ##############################
-#ifdef VARIANT_PPM
+//#ifdef VARIANT_PPM
 /* ###### CONTROL VIA RC REMOTE ######
  * Right sensor board cable. Channel 1: steering, Channel 2: speed.
  * https://gist.github.com/peterpoetzi/1b63a4a844162196613871767189bd05
@@ -414,13 +414,13 @@
 
 
 // ################################# VARIANT_PWM SETTINGS ##############################
-#ifdef VARIANT_PWM
+//#ifdef VARIANT_PWM
 /* ###### CONTROL VIA RC REMOTE ######
  * Right sensor board cable. Connect PA2 to channel 1 and PA3 to channel 2 on receiver.
  * Channel 1: steering, Channel 2: speed.
 */
   // #define DUAL_INPUTS                     // ADC*(Primary) + PWM(Auxiliary). Uncomment this to use Dual-inputs
-  #ifdef DUAL_INPUTS
+  //#ifdef DUAL_INPUTS
     #define FLASH_WRITE_KEY       0x1105  // Flash memory writing key. Change this key to ignore the input calibrations from the flash memory and use the ones in config.h
     #define CONTROL_ADC           0       // use ADC as input. Number indicates priority for dual-input. Disable CONTROL_SERIAL_USART2, FEEDBACK_SERIAL_USART2, DEBUG_SERIAL_USART2!
     #define CONTROL_PWM_RIGHT     1       // use RC PWM as input on the RIGHT cable. Number indicates priority for dual-input. Disable DEBUG_SERIAL_USART3!
@@ -456,7 +456,7 @@
 
 
 // ################################# VARIANT_IBUS SETTINGS ##############################
-#ifdef VARIANT_IBUS
+//#ifdef VARIANT_IBUS
 /* CONTROL VIA RC REMOTE WITH FLYSKY IBUS PROTOCOL 
 * Connected to Right sensor board cable. Channel 1: steering, Channel 2: speed.
 */
